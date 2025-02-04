@@ -16,12 +16,19 @@ public class Exam06 {
 		int a = 0;
 		System.out.print("자연수입력 : ");
 		String num = scan.next();
+		
 		for(int i=0 ; i< num.length();i++) {
-			System.out.println("asci : "+(int)num.charAt(i));
+			System.out.print("asci("+num.charAt(i)+"): "
+						+(int)num.charAt(i)+" - ");
+			
 			sum1+=num.charAt(i) - '0';
+			
+			System.out.println((int)('0')+": {0(Ascii}"
+					+"="+(num.charAt(i) - '0'));
 			//0을 왜뺄까? : 
 			//아스키코드기준 : 0 ~9 == (48~57)( 아스키코드때문에 0을 뺴주는거임)
 		}
+		
 		System.out.println(sum1);
 		
 		

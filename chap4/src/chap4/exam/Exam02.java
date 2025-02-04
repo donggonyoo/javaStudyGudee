@@ -35,7 +35,9 @@ public class Exam02 {
 				System.out.println("대문자 : "+(char)(ch-32));
 			}
 			else if('0'<= ch && ch<='9') {
-				System.out.println("숫자");
+				System.out.println("숫자 +20 ");
+				int a = (int)(ch - '0');
+				System.out.println(a+"+20 : "+(a+20));
 			}
 			else {
 				System.out.println("기타문자");
