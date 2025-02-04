@@ -18,8 +18,10 @@ import java.util.Scanner;
 
 public class Exam03 {
 	public static void main(String[] args) {
-		String a,b;
+		//가위바위보 문자열 저장변수
+		
 		for (int i = 0; i < 5; i++) {
+			String a=null,b=null;
 			int sNum = new Random().nextInt(3) + 1 ;
 			//1~3의 랜덤한수
 			switch (sNum) {
@@ -27,6 +29,7 @@ public class Exam03 {
 			case 2-> a="바위";
 			default-> a="보자기";}
 
+			//사용자입력부분
 			Scanner scan = new Scanner(System.in);
 			System.out.print("가위(1),바위(2),보(3) 입력 : ");
 			int my = scan.nextInt();
@@ -35,6 +38,7 @@ public class Exam03 {
 			case 2-> b="바위";
 			default-> b="보자기";}
 
+			//출력화면 "\t"==tab
 			System.out.println("시스템\t사용자");
 			System.out.println("("+a+")"+"\t"+"("+b+")");
 			if(	sNum==1 && my==2 
