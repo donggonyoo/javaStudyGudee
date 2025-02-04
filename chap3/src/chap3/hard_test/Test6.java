@@ -11,7 +11,7 @@ public class Test6 {
 		System.out.print("반지름 입력 :  ");
 		int a = scan.nextInt();
 		
-		System.out.println("둘레 : "+2*(a*pi));
-		System.out.println("면적 : "+a*a*pi);
+		System.out.println("둘레 : "+2*a*pi); //2 pi r
+		System.out.println("면적 : "+a*a*pi);// pi r^2
 	}
 }

@@ -23,13 +23,25 @@ public class Test1 {
 		int b= a/500;
 		int c = (a%500)/100;
 		int d = (a%100) / 50;
-		int e = a%100 / 10;
+		int e = a%50 / 10;
 		int f = a%10;
 		System.out.println("500원 : "+b);
 		System.out.println("100원 : "+c);
 		System.out.println("50원 : "+d);
 		System.out.println("10원 : "+e);
 		System.out.println("1원 : "+f);
+		
+		//방법2
+		System.out.println("@@ 방법 2 @@");
+		System.out.println("500원 ㅣ "+a/500);
+		a%=500;
+		System.out.println("100원 ㅣ "+a/100);
+		a%=100;
+		System.out.println("50원 ㅣ "+a/50);
+		a%=50;
+		System.out.println("10원 ㅣ "+a/10);
+		a%=10;
+		System.out.println("1원 ㅣ "+a);
 	}
 
 }

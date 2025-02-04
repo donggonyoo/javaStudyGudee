@@ -22,7 +22,7 @@ public class Test9 {
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.print("이름 : ");
-		String name = scan.nextLine();
+		String name = scan.next();
 		
 		System.out.print("학년 : ");
 		int grade = scan.nextInt();
@@ -33,9 +33,8 @@ public class Test9 {
 		System.out.print("번호 : ");
 		int num = scan.nextInt();
 		
-		scan.nextLine();
 		System.out.print("성별(M/W) : ");
-		String sex = scan.nextLine();
+		String sex = scan.next();
 		
 		System.out.print("성적 : (소수점 둘쨰자리만)");
 		double grade_ = scan.nextDouble();

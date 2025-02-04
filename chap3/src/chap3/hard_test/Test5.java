@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 높이의 길이
  * 20
  * 
- * 넓이=15.0
+ * 넓이=100.0
  */
 public class Test5 {
 	public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Test5 {
 		System.out.println("높이 : ");
 		int h = scan.nextInt();
 		
-		double size = (double)(w+h)/2;
+		double size = (double)(w*h)/2;
 		System.out.println("넓이 : "+size);
 		
 
