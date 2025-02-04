@@ -10,7 +10,6 @@ public class Test07 {
 				sum+=i;
 			}
 		}
-		
 		System.out.println("1부터100까지의 숫자중 \n"
 				+ "2의배수거나 3의배수의 합 구하기");
 		System.out.println("sum : "+sum);
