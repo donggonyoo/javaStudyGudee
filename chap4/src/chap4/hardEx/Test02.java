@@ -25,17 +25,17 @@ public class Test02 {
 		
 		if('a'<= ch && ch<='z') {
 			char a = (char) (ch - 32);
-			System.out.println("a : "+a);
+			System.out.println("대문자 : "+a);
 		}
 		else if('A'<= ch && ch<= 'Z') {
 			char b = (char)(ch + 32);
-			System.out.println("b : "+b);
+			System.out.println("소문자 : "+b);
 		}
 		else if('0'<= ch && ch<= '9') {
-			System.out.println("ascii : "+(int)ch);
+			System.out.println("'"+ch+"'의 ascii : "+(int)ch);
 			System.out.println("'0'의 ASCII : "+(int)'0');
 			int a = (int)ch - '0';
-			System.out.println(a+20);
+			System.out.println("출력(+20) :"+ (a+20));
 		}
 		else {
 			System.out.println("기본문자");
