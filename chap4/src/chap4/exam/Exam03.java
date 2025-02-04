@@ -1,4 +1,4 @@
-package chap4.exan;
+package chap4.exam;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -21,10 +21,11 @@ public class Exam03 {
 		String a,b;
 		for (int i = 0; i < 5; i++) {
 			int sNum = new Random().nextInt(3) + 1 ;
+			//1~3의 랜덤한수
 			switch (sNum) {
-			case 1->a="가위";
-			case 2->a="바위";
-			default->a="보자기";}
+			case 1-> a="가위";
+			case 2-> a="바위";
+			default-> a="보자기";}
 
 			Scanner scan = new Scanner(System.in);
 			System.out.print("가위(1),바위(2),보(3) 입력 : ");
