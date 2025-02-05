@@ -5,11 +5,12 @@ import java.util.Scanner;
 /*
  * [결과]
 삼각형의 높이를 입력하세요
-3(h) : 9
+
+3(h) : 9(숫자의갯수)
                         루프(a)     공백(b)          숫자(c)
--	-	9		     	 1          2(h-a)             9(1) (a*2)-1
--	8	7	6		     2          1             876(3)  
-5	4	3	2	1	     3          0            54321(5) 
+-	-	9		     	 1          2(h-a)        9    (1) (a*2)-1
+-	8	7	6		     2          1           8 7 6  (3)  
+5	4	3	2	1	     3          0         5 4 3 2 1(5) 
  
 */
 public class Test06 {
@@ -21,19 +22,13 @@ public class Test06 {
 		
 		for (int a = 1; a <= h; a++) {
 			for (int b = 0; b < (h-a); b++) {
-				System.out.print(" ");
-				if(a==1) {
-					System.out.print(" ");
-				}
-				if(sqrt <= 10) {
-					System.out.print(" ");
-				}
+				System.out.print("   ");
+					
 			}
 			for (int c = 0; c < (a*2)-1; c++) {
-				if(sqrt<=10) {
-					System.out.print(" ");
-				}
-				System.out.print(sqrt+" ");
+				
+				System.out.printf("%2d",sqrt);
+				System.out.print(" ");
 				sqrt--;
 			}System.out.println();
 			

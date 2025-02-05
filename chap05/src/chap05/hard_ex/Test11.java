@@ -66,7 +66,19 @@ public class Test11 {
 		System.out.print(num+"의 16진수 : ");
 		for (int j = o-1; j >=0; j--) {
 			System.out.print(sixteen[j]);
-		}
+		}System.out.println();
+		
+		
+		System.out.println("@자바 제공하는 함수로 사용@");
+		String binaryString = Integer.toBinaryString(num);
+		System.out.println("10->2진수 : "+binaryString);
+		
+		
+		String octalString = Integer.toOctalString(num);
+		System.out.println("10->8진수 : "+octalString );
+		
+		String hexString = Integer.toHexString(num);//toHexString으로하면 소문자로 반환
+		System.out.println("10->16진수 : "+hexString.toUpperCase());
 	
 		
 		

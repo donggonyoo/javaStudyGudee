@@ -41,11 +41,6 @@ public class Test09 {
 			else {
 				System.out.println("대칭이아님");
 			}
-
-
-
-
-
 		}
 	}
 

@@ -26,7 +26,7 @@ import java.util.Scanner;
 *******          7        0                  7
  
  */
-public class Test08 {
+public class Test08_test {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
@@ -48,16 +48,9 @@ public class Test08 {
 				}System.out.println();
 				
 			}
-			int j=0;
-			for (int k = (h/2)+2; k <= h; k++) {
-				for (j = 0; j <h-k ; j++) {
-					System.out.print("   ");
-				}
-				for (int y = 0; y < k-j; y++) {
-					System.out.print(" * ");
-				}System.out.println();
+			
 				
-			}
+			
 		}
 	}
 }

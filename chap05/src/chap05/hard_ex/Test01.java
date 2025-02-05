@@ -26,9 +26,32 @@ import java.util.Scanner;
 public class Test01 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		boolean check=false;
 		
 		System.out.print("강아지병아리 마릿수 입력 : ");
-		int count = scan.nextInt();
+		int count= scan.nextInt();
+		
+		System.out.println("전체 다리 수");
+		int leg = scan.nextInt();
+		
+		int i ,j;
+		
+		for (i = 0; i <= leg; i++) {
+			for ( j = 0; j <= leg; j++) {
+				if (i+j==count && i*2 +j*4== leg) {
+					System.out.println("병아리 "+i+"마리 "+"강아지 "+j+"마리");
+					check = true;
+					break;
+					
+				}
+				
+			}
+		}
+		if(check!= true) {
+			System.out.println("계산안됨");
+		}
+		
+		
 		
 		
 

@@ -17,6 +17,8 @@ public class Exam4 {
 		
 		String string = args[0];
 		System.out.println(string);
+		String string2 = args[1];
+		System.out.println(string2);
 	;
 		int length = args.length;
 		System.out.println("length : "+length);
