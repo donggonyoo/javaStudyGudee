@@ -22,13 +22,13 @@ public class Test06 {
 		
 		for (int a = 1; a <= h; a++) {
 			for (int b = 0; b < (h-a); b++) {
-				System.out.print("   ");
+				System.out.print("    ");
 					
 			}
 			for (int c = 0; c < (a*2)-1; c++) {
 				
-				System.out.printf("%2d",sqrt);
-				System.out.print(" ");
+				System.out.printf("%4d",sqrt);
+
 				sqrt--;
 			}System.out.println();
 			
