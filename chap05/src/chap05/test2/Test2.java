@@ -13,6 +13,12 @@ public class Test2 {
 		
 		
 		int int2 = Integer.parseInt(args[1]);
+		for (int i = 0; i < args.length; i++) {
+			System.out.println("args["+i+"] : "+args[i]);
+		}
+		//args 입력 할떄 space를 누르지않는다면 배열의요소가 하나가됨 args.length == 1 
+		//띄어쓰기로 요소를 분리해서 저장하자
+	
 	
 		int i=0;
 		System.out.println(int1+"와"+int2+"의 공약수  : ");

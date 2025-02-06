@@ -18,11 +18,12 @@ X         X             00       0.10
 X         X            10.0     10.10   
 
  */
-public class Test5 {
+public class Test5_1 {
 	public static void main(String[] args) {
 		int size=11;
 		String[][] a =  new String[size][size];
-		
+		int b=0;
+		int c=(a.length-1);
 		
 		//String 배열의 초기화는 필수임
 		//초기화안할시 다 null값이므로 다른것을 찍을 수 없게됨
@@ -33,12 +34,16 @@ public class Test5 {
 			
 		}
 		
-		for (int i = 0; i < a.length; i++) {
-			a[i][i] = "X";
-			a[i][a.length-1-i] = "X"; 
-			//a[0][0]과 a[0][10]    , a[1][1] 과 a[1][9] ......
-			//a[6][6] 과 a[6][4] ......만 X이찍힘
+		for (int i = 0; i <= a.length; i++) {
+			for (int j = 0; j < a[0].length; j++) {
+				if(j==b || j==c) {
+					a[i][j] = "X";
+				}
+			}b++;c--;	
 		}
+		
+		
+		
 		
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[0].length; j++) {

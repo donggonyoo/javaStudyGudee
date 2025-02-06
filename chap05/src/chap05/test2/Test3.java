@@ -35,13 +35,13 @@ public class Test3 {
 		}; 
 		
 		int[][] result = new int[score.length+1][score[0].length+1];
-		int j=0;
+		
 		
 		int a =  score.length;
 		int b= score[0].length;
 		for (int i = 0; i < a; i++) {
 			
-			for (j = 0; j < b; j++) {
+			for (int j = 0; j < b; j++) {
 				result[i][j] = score[i][j];
 				result[i][score[i].length] += score[i][j];
 				result[score.length][j] += score[i][j];

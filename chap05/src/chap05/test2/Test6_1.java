@@ -17,7 +17,7 @@ X□■□■□■□■□X
 ■ : ㅁ 한자
 □ : ㅁ 한자
 */
-public class Test6 {
+public class Test6_1 {
 	public static void main(String[] args) {
 		int size=11;
 		String[][] a =  new String[size][size];
@@ -42,9 +42,13 @@ public class Test6 {
 				}
 			}
 		}
+		int b=a.length-1;
+		int c =0;
 		for (int i = 0; i < a.length; i++) {
-			a[i][i] = "X";
-			a[i][a.length-1-i] = "X";
+			for (int j = 0; j < a[0].length; j++) {
+				a[i][b] = "X";
+				a[i][c] = "X";
+			}b--;c++;
 		}
 		
 		

@@ -10,10 +10,6 @@ import java.util.Arrays;
  */
 public class Test1 {
 	public static void main(String[] args) {
-		if(args.length==1) {
-			System.out.println("command 입력");
-		}
-		
 		
 		
 		System.out.println(Arrays.toString(args));
