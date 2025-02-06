@@ -1,13 +1,13 @@
 package chap05.exam;
 
-import java.util.Arrays;
+
 
 /*
  * command라인에서 숫자입력받아 숫자의 자릿수합 출력
  * 
  * 
  */
-public class Exam4 {
+public class Exam04 {
 	public static void main(String[] args) {
 		if(args.length==0) {
 			System.out.println("command 숫자 입력 : ");

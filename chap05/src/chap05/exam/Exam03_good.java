@@ -5,7 +5,7 @@ import java.util.Arrays;
 /*
  * str문자열에 저장된 소문자의 갯수 출력
  */
-public class Exam3_good {
+public class Exam03_good {
 	public static void main(String[] args) {
 		String str = "public static void main(String[] args)";
 
