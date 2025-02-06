@@ -1,6 +1,5 @@
 package chap05.hard_ex;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 /*

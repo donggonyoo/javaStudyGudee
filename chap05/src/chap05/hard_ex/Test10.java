@@ -31,7 +31,11 @@ public class Test10 {
 				count++;
 			}
 			else {
-				System.out.println("오류명 : "+ch[i]+"부분이 숫자X : "+(i+1)+"번째숫자");
+				if(i==0 && ch[i]=='-') {
+					count++;
+				}
+				else {
+				System.out.println("오류명 : "+ch[i]+"부분이 숫자X : "+(i+1)+"번째숫자");}
 			}
 			
 		}
