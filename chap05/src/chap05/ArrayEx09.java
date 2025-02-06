@@ -4,7 +4,7 @@ package chap05;
  * 가변배열 : 다차원배열에서만 가능
  * 	첫번째 배열의 갯수만 설정하고 나머지값을 설정X
  */
-public class ArrayEx9 {
+public class ArrayEx09 {
 	public static void main(String[] args) {
 		
 		int arr[][] = new int[3][]; //가변배열 (3행짜리 배열)(열은 알아서)
