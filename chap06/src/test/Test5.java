@@ -28,11 +28,12 @@ import java.util.Scanner;
 class School{
 
 	public String name;
-	public Student2[] students;
+	public Student2[] students; 
+	//student2 참조를 가지고있음 == 객체화만 시켜주면 된다.
 	
 }
 class Student2{
-	public  Score score;
+	public  Score score; //new Score()로 객체만들어서 사용하자
 	String name;
 	String stuNo;
 	
@@ -52,7 +53,7 @@ public class Test5 {
 		School school = new School();
 		Scanner scan = new Scanner(System.in);
 		school.name = "구디초";
-		school.students = new Student2[3];
+		school.students = new Student2[3]; 
 		for(int i = 0; i < school.students.length; i++) {
 			// Student 객체 생성
 			school.students[i] = new Student2();

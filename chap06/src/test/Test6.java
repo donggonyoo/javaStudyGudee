@@ -25,12 +25,13 @@ public class Test6 {
 		
 		System.out.println("myCoin  youCoin");
 		while(myCount<3 && youCount<3) {
+			//두개의 count 가 3보다 작을동안 반복
 			myCoin.flip();
 			youCoin.flip();
 			
 			System.out.println(myCoin.getSide()+"\t "+youCoin.getSide());
 			
-			myCount = myCoin.isSquare()? myCount+1 : 0;
+			myCount = myCoin.isSquare()? myCount+1 : 0;   //isSquare가 참 (앞면) 이면 myCount = mycount+1 해줌 아니면 mycount =0;
 			youCount = youCoin.isSquare()? youCount+1 : 0;
 			
 			if(myCount==3) {
@@ -43,16 +44,8 @@ public class Test6 {
 			else if(youCount==3) {
 				System.out.println("youCoin 승리");
 			}
-			
-			
-			
-			
-		}
-		
-		
+		}	
 	}
-
-
 }
 
 
