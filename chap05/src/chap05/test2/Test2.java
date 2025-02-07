@@ -9,10 +9,16 @@ package chap05.test2;
 public class Test2 {
 
 	public static void main(String[] args) {
+		
+		if(args.length !=2) {
+			System.out.println("commandLine에 두개의 파라미터만");
+			return;
+		}
+		
+		
 		int int1 = Integer.parseInt(args[0]);
-		
-		
 		int int2 = Integer.parseInt(args[1]);
+		
 		for (int i = 0; i < args.length; i++) {
 			System.out.println("args["+i+"] : "+args[i]);
 		}
@@ -21,13 +27,13 @@ public class Test2 {
 	
 	
 		int i=0;
-		System.out.println(int1+"와"+int2+"의 공약수  : ");
+		System.out.print(int1+"와"+int2+"의 공약수  : ");
 		while(true) {
 			++i;
 			if(int1%i==0 && int2%i==0) {
 				System.out.print(i+",");
 			}
-			if(i>int1 && i>int2) {
+			if(i>int1 || i>int2) {
 				break;
 			}	
 			}

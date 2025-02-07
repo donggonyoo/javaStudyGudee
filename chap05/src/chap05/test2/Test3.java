@@ -35,16 +35,16 @@ public class Test3 {
 		}; 
 		
 		int[][] result = new int[score.length+1][score[0].length+1];
+		//result배열의크기 : score배열의 행 , 열 1씩 큰 배열
 		
 		
-		int a =  score.length;
-		int b= score[0].length;
+		int a =  score.length; //행
+		int b= score[0].length; //열
 		for (int i = 0; i < a; i++) {
-			
 			for (int j = 0; j < b; j++) {
 				result[i][j] = score[i][j];
-				result[i][score[i].length] += score[i][j];
-				result[score.length][j] += score[i][j];
+				result[i][b] += score[i][j];
+				result[a][j] += score[i][j];
 				
 				
 			}

@@ -47,7 +47,9 @@ public class Test4 {
 		
 		 
 		int[] students= null;
-		 
+		//참조변수만 있다 (주소)
+		int count = 0;
+		
 		
 		while(true) {
 			System.out.println("--------------------");
@@ -58,7 +60,7 @@ public class Test4 {
 			
 		if(num==1) {
 			System.out.print("학생 수 : ");
-			int count = scan.nextInt();
+			count = scan.nextInt();
 			students = new int[count];
 			
 		}
@@ -70,7 +72,11 @@ public class Test4 {
 			}
 		}
 		else if( num==3) {
+			int sum=0;
+			double avg=0;
+			 
 			for (int i = 0; i < students.length; i++) {
+				
 				System.out.print("score["+(i+1)+"] : "+students[i]+"  ");
 			}System.out.println();
 		}
@@ -78,6 +84,7 @@ public class Test4 {
 		else if(num==4) {
 			int max=0;
 			int sum=0;
+			double avg=0;
 			for (int i = 0; i < students.length; i++) {
 				sum+=students[i];
 				if(max < students[i]) {
@@ -86,6 +93,7 @@ public class Test4 {
 			}
 			System.out.print("최고점수 : ");
 			System.out.println(max);
+			System.out.printf("평균 : %.3f ",(double)sum/students.length);
 		}
 		else {
 			break;

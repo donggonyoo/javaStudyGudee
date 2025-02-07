@@ -10,23 +10,23 @@ import java.util.Arrays;
  */
 public class Test1 {
 	public static void main(String[] args) {
+		if(args.length==0) {
+			System.out.println("Command라인에 파라미터 입력 ");
+			return;
+		}
 		
 		
 		System.out.println(Arrays.toString(args));
 		int int1 = Integer.parseInt(args[0]);
-		int [] a = new int[int1+1];
+		System.out.print(int1+"의 약수 : ");
 		for (int i = 1; i <= int1; i++) {
 			if(int1%i==0) {
-				a[i]=i;
+				System.out.print(i+" ");
 			}	
 		}
 		
-		System.out.print(int1+"의 약수 : ");
-		for (int i : a) {
-			if(i!=0) {
-			System.out.print(i+",");}
-			
-		}
+		
+		
 			
 		
 	}
