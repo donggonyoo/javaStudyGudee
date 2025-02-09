@@ -18,7 +18,9 @@ public class ArrayEx09 {
 				if(j!=arr[i].length-1) {System.out.print(", ");}
 				
 			}System.out.println();
-			
 		}
+		
+	
+		
 	}
 }

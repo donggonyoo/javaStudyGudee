@@ -14,6 +14,7 @@ public class Test6_True {
 			} else 
 				break;
 		}
+		
 		char[][] arr = new char[row][row];
 		  for(int i=0; i<arr.length;i++) {
 		   for(int j=0;j<arr[i].length;j++) {

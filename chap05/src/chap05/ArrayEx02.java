@@ -18,6 +18,7 @@ public class ArrayEx02 {
 			++b;
 			System.out.println("arr["+b+"]:"+i);
 		}
+		
 	}
 
 }

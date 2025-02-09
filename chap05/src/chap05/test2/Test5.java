@@ -1,6 +1,7 @@
 package chap05.test2;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /*
 11*11 크기의 사각형이 있다고 가정할때 다음 결과를 출력되도록 프로그램 작성하기
@@ -20,7 +21,9 @@ X         X            10.0     10.10
  */
 public class Test5 {
 	public static void main(String[] args) {
-		int size=11;
+		Scanner scan = new Scanner(System.in);
+		System.out.printf("크기입력하세요 : (홀수만)");
+		int size = scan.nextInt();
 		String[][] a =  new String[size][size];
 		
 		
@@ -33,15 +36,15 @@ public class Test5 {
 			
 		}
 		
-		for (int i = 0; i < a.length; i++) {
+		for (int i = 0; i < size; i++) {
 			a[i][i] = "X";
-			a[i][a.length-1-i] = "X"; 
+			a[i][size-1-i] = "X"; 
 			//a[0][0]과 a[0][10]    , a[1][1] 과 a[1][9] ......
 			//a[6][6] 과 a[6][4] ......만 X이찍힘
 		}
 		
-		for (int i = 0; i < a.length; i++) {
-			for (int j = 0; j < a[0].length; j++) {
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
 				System.out.print(a[i][j]+" ");
 			}System.out.println();
 			
