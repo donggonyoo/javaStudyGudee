@@ -21,7 +21,7 @@ public class Test6 {
 		Coin youCoin = new Coin();
 		
 		int myCount =0;
-		int youCount =0;
+		int youCount =0;//앞면의개수를 세기위한 변수
 		
 		System.out.println("myCoin  youCoin");
 		while(myCount<3 && youCount<3) {
@@ -29,9 +29,11 @@ public class Test6 {
 			myCoin.flip();
 			youCoin.flip();
 			
-			System.out.println(myCoin.getSide()+"\t "+youCoin.getSide());
+			System.out.println(myCoin.getSide()+"\t "+youCoin.getSide());//앞면or뒷면 출력
 			
-			myCount = myCoin.isSquare()? myCount+1 : 0;   //isSquare가 참 (앞면) 이면 myCount = mycount+1 해줌 아니면 mycount =0;
+			
+			//isSquare가 참 (앞면) 이면 myCount = mycount+1 해줌 아니면 mycount =0;
+			myCount = myCoin.isSquare()? myCount+1 : 0;   
 			youCount = youCoin.isSquare()? youCount+1 : 0;
 			
 			if(myCount==3) {

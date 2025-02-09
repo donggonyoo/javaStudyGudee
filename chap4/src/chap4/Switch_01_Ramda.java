@@ -18,9 +18,9 @@ public class Switch_01_Ramda {
 		for (int i = 0; i <5; i++) {
 			System.out.print("점수입력 : ");
 			int score = scan.nextInt();
-			if(score==100) {--score;}
+		
 			switch (score/10) {
-			case 9-> {
+			case 10,9-> {
 				System.out.println("A학점");
 				System.out.println("우수");}
 			case 8-> {

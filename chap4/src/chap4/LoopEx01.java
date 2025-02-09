@@ -28,13 +28,14 @@ import java.util.List;
  */
 public class LoopEx01 {
 	public static void main(String[] args) {
-		System.out.println("반복문없이 1~5 출력하기");
+		System.out.println("==반복문없이 1~5 출력하기==");
 		System.out.print(1);
 		System.out.print(2);
 		System.out.print(3);
 		System.out.print(4);
 		System.out.println(5);
 		
+		System.out.println("==for문을이용해 1~5출력==");
 		for (int i = 1; i <= 5; i++) {//i :지역변수
 			System.out.print(i);	
 			if(i==5) {
@@ -48,7 +49,7 @@ public class LoopEx01 {
 		 * 4) i++;  //6       -------|
 		 */
 		
-		
+		System.out.println("==while문으로 1~5까지실행==");
 		int count=0; //전역변수 count
 		while(true) {
 			count++;
@@ -57,10 +58,21 @@ public class LoopEx01 {
 				System.out.println();
 				break;}
 		}
-		ArrayList<Integer> arrayList = new ArrayList<Integer>(List.of(1,2,3,4,5));
-		for (Integer integer : arrayList) {
-			System.out.print(integer);
-		}
+		
+		int k=0;
+		System.out.println("==do-while문으로 1~5실행==");
+		do {
+			k++;// 1 2 3 4 5 
+			System.out.print("k : "+k+"\t");// \t == tab
+		
+			
+		} while (k<5); //5가 되면 break;
+		
+		System.out.println();
+		System.out.println("==do=while문 조건과 상관없이 실행되는것 증명==");
+		int j = 90; 
+		do {System.out.println("j : "+j);}
+		while(j<10);//이미 조건이 맞지않아서 원래는 반복루프가 돌지않음
 		
 		
 		

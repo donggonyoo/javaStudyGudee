@@ -11,7 +11,8 @@ public class Exam07 {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("삼각형의 높이 입력 : ");
 		int nextInt = scan.nextInt();
-		Exam07_Triangle print = new Exam07_Triangle(nextInt);
+		Exam07_Triangle print = new Exam07_Triangle();
+		print.basic(nextInt);
 		print.reverse(nextInt);
 		print.emptyPrint(nextInt);
 		print.emptyReverse(nextInt);

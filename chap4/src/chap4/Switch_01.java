@@ -16,24 +16,19 @@ public class Switch_01 {
 		for (int i = 0; i <5; i++) {
 			System.out.print("점수입력 : ");
 			int score = scan.nextInt();
-			if(score==100) {--score;}
+			
 			switch (score/10) {
-			case 10:
+			case 10: // 10에는 break; 문도 없으므로 밑으로 한칸 내려감
 			case 9: 
-				System.out.println("A학점");
-				break;
+				System.out.println("A학점");break;
 			case 8: 
-				System.out.println("B");
-				break;
+				System.out.println("B");break;
 			case 7:
-				System.out.println("C");
-				break;
+				System.out.println("C");break;
 
 			case 6:
-				System.out.println("D");
-				break;
-
-			default:
+				System.out.println("D");break;
+			default: //모두 아니면 실행
 				System.out.println("F");
 			}
 

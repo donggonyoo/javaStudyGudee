@@ -10,6 +10,7 @@ public class Exam04 {
 	public static void main(String[] args) {
 		int sumF=0,sumW=0,sumD=0;
 		int w=0,w1=0;
+		
 		for (int i = 1; i <= 100; i++) {
 			if(i%2==0) {
 				sumF+=i;
