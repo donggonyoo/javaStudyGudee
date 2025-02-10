@@ -21,8 +21,7 @@ class Animal{
 	}
 	public String toString() {
 		return "이름(name): "+name+"\n"+
-				"나이(age) : "+age+"\n"+
-				eat();
+				"나이(age) : "+age+"\n"+eat();
 	}
 }
 public class Test2 {

@@ -53,7 +53,7 @@ public class Test5 {
 		School school = new School();
 		Scanner scan = new Scanner(System.in);
 		school.name = "구디초";
-		school.students = new Student2[3]; 
+		school.students = new Student2[3];//Student2객체가아님 ,Student2 참조변수의 배열
 		for(int i = 0; i < school.students.length; i++) {
 			// Student 객체 생성
 			school.students[i] = new Student2();

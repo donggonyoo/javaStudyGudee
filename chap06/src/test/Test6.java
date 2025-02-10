@@ -12,6 +12,24 @@ package test;
   앞면	앞면
  youCoin 승리
  */
+//class Coin{
+//	int side;
+//	
+//	void flip() {
+//		side = (int)(Math.random()*2); 
+//		//  0<= Matn.random() < 1
+//		//  0<= Math.random()*2 < 2  ----->
+//		     (int)Maht.random()*2 == 0 or 1
+////		new Random().nextInt(1);이거와 같은 뜻
+//	}
+//	boolean isSquare() {
+//		return side==0?true : false; //side가 0이면 true
+//	}
+//	String getSide() {
+//		return side==0?"앞":"뒤"; //앞 뒤 반환
+//	}
+//	
+//}---> Test3에존재
 
 
 public class Test6 {
