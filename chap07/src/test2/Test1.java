@@ -94,7 +94,7 @@ class Peach extends Fruit{
 }
 //-----------------------------------------------------------------------------
 class Drink extends Food{
-	private int ml;
+	 int ml;
 
 	Drink(int price,int ml) {
 		super(price);
@@ -124,7 +124,7 @@ class Sidar extends Drink{
 }
 //-----------------------------------------------------------------------------
 class Snack extends Food{
-	private int gram;
+	 int gram;
 
 	Snack(int price, int gram) {
 		super(price);
@@ -167,13 +167,15 @@ class Buyer{
 		else {
 			this.money -= f.price;
 			this.point += f.point;
-			System.out.println(f+" ["+f.price+"원]");
-			if(f instanceof Fruit) {System.out.print(((Fruit) f).brix+"당도 상품구매");
-			cart[cnt++]= f;
+			System.out.println(f+"를(을) ["+f.price+"원] 구입");
+			if(f instanceof Fruit) {System.out.println(((Fruit) f).brix+"당도 상품구매");}
+			else if(f instanceof Drink){System.out.println(((Drink) f).ml+"ml 상품 구매");}
+			else if(f instanceof Snack) {System.out.println(((Snack)f).gram+"g 상품 구매");}
+			cart[cnt++]= f; //카트에넣었다면 cnt(갯수)증가시켜주자
 			}
 		}
 
-	}
+	
 
 
 	void summary() {
