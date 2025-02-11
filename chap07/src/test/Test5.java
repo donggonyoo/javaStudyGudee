@@ -40,7 +40,11 @@ class Employee{
 		this.address = address;
 		this.dept = dept;
 		
-		}	
+		}
+	public String toString() {
+		return type+": 이름 = "+name+", 주소 = "+address;
+	}
+	
 }
 
 class FormalEmployee extends Employee{
@@ -63,7 +67,8 @@ class FormalEmployee extends Employee{
 	
 	public String toString() {
 		//정규직:이름=김정규, 주소=서울시 용산구,부서=총무부,직원번호=1,직급=과장,연봉=5000
-		return type+": 이름 = "+name+", 주소 = "+address+
+//		type+": 이름 = "+name+", 주소 = "+address
+		return super.toString()+
 				",부서 : "+dept+" 직원번호 : "+empNo+", 직급 : "+position;
 	}	
 }
@@ -86,7 +91,7 @@ class InformalEmployee extends Employee{
 	}
 	//비정규직:이름=이비정, 주소=서울시 구로구,부서=영업부,계약만료일=Sun Sep 01 15:58:50 KST 2024,기본입금=1000
 	public String toString() {
-		return type+": 이름 = "+name+", 주소 = "+address+
+		return super.toString()+
 				",부서 : "+dept+" 계약만료일 : "+week+","+date;}		
 }
 

@@ -22,22 +22,21 @@ class Circle{
 		this.r = r;
 		this.x = x;
 		this.y =y;
-		++count; //모든 생성자는 이 생성자를 다 호출하므로 
+		no+= ++count; 
+		//모든 생성자는 이 생성자를 다 호출하므로 
 		//객체 생성할때 마다 원의개수를 하나늘려준다
 		}
 	
-	String area() {
-//		return  Math.PI*r*r;
-		return String.format("%.3f", Math.PI*r*r); 
+	double area() {
+
+		return  Math.PI*r*r; 
 
 	}
-	String length() {
-//		return 2*Math.PI*r;
-		return String.format("%.3f", 2*Math.PI*r);
+	double length() {
 
-		// %.nf   소수점 n쨰 자리만 표현하는방법
-		//단점 : String으로 바뀌어버림
-//		Double.parseDouble(s);로 다시 바꿀수 있긴 함
+		return  2*Math.PI*r;
+
+
 	}
 	
 	public Circle(int x, int y) {
@@ -56,10 +55,16 @@ class Circle{
 	}
 	
 	public String toString() {
-		return count+"번 원 :"+
-	"반지름 : "+r+" 좌표:("+x+","+y+")"+
-				"\n넓이 : "+area()+" 둘레 : "+length();
+		return String.format("%3d번 원 반지름 : %3d , 좌표 : (%3d,%3d), \n"
+				+ "  넓이 : %10.3f , 둘레 : %10.3f \n", no,r,x,y,area(),length());
+	
 	}
+//	public String toString() {
+//		return no+"번 원 :"+
+//	"반지름 : "+r+" 좌표:("+x+","+y+")"+
+//				"\n넓이 : "+String.format("%.3f", area())+
+//				" 둘레 : "+String.format("%.3f", length());
+//	}
 	
 	
 	

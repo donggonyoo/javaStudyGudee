@@ -60,7 +60,7 @@ class Coin{
 
 public class Test2 {
 	public static void main(String[] args) {
-		Coin[] coinarr = new Coin[10];
+		Coin[] coinarr = new Coin[10];//Coin객체 참조할 참조변수 10개의 배열생성
 		int[] cnt1 = new int[2];
 		int[] cnt2 = new int[2];
 		for(int i=0;i<coinarr.length;i++) {
