@@ -5,7 +5,7 @@ abstract class Animal{
 	Animal(String name){
 		this.name = name;
 	}
-	abstract void eat();
+	abstract void eat();//하위 클래스들은 무조건 상속해야하는 메서드
 }
 
 //----------------------------------------------------------------------------
