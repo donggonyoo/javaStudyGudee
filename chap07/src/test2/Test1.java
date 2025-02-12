@@ -66,7 +66,7 @@ class Food{
 }
 //-----------------------------------------------------------------------------
 class Fruit extends Food{
-	double brix;
+	public double brix;
 	Fruit(int price,double brix) {
 		super(price);
 		this.brix = brix;
@@ -94,7 +94,7 @@ class Peach extends Fruit{
 }
 //-----------------------------------------------------------------------------
 class Drink extends Food{
-	private int ml;
+	public int ml;
 
 	Drink(int price,int ml) {
 		super(price);
@@ -124,7 +124,7 @@ class Sidar extends Drink{
 }
 //-----------------------------------------------------------------------------
 class Snack extends Food{
-	private int gram;
+	public int gram;
 
 	Snack(int price, int gram) {
 		super(price);

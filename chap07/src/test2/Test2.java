@@ -23,6 +23,8 @@ package test2;
 
 */
 
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.util.Date;
 
 abstract class Employee{
@@ -57,18 +59,26 @@ class FormalEmployee extends Employee{
 
 class InformalEmployee extends Employee{
 	int primary;
-	Date date;
+	LocalDate date;
+	DayOfWeek w;
 
-	public InformalEmployee( String name, String address, String dept,Date date , int primary) {
+	public InformalEmployee( String name, String address, String dept,LocalDate date ,DayOfWeek w, int primary) {
 		super("비정규", name, address, dept);
 		this.date = date;
 		this.primary = primary;
+		this.w = w;
 	}
 
 	@Override
 	int getPay() {
 		return primary;
 	}
+
+	@Override
+	public String toString() {
+		return "InformalEmployee [primary=" + primary + ", date=" + date + ", w=" + w + "]";
+	}
+	
 }
 
 class TempEmployee extends Employee{
@@ -93,10 +103,18 @@ public class Test2 {
 	public static void main(String[] args) {
 		Employee[] emps = new Employee[3];
 		emps[0] = new FormalEmployee("박정규","서울","총무부","001","과장",50000000);
-		Date exDate = new Date(); 
+		
+		Date exDate = new Date(); //현재일시
+		//exDate.getTime() : 1970년부태 현재까지의 시간을 밀리초로 리턴
+		System.out.println(("exDate.getTime() : "+exDate.getTime()));//자바8이전버전에 권장
+		System.out.println("exDate : "+exDate);
 		exDate.setTime(exDate.getTime() + (1000L*60*60*24*365));
-//		System.out.println(exDate);
-		emps[1] = new InformalEmployee("유비정","서울","기획부",exDate,1000000);
+
+		LocalDate now = LocalDate.now();	
+		LocalDate plusYears = now.plusYears(2);
+		DayOfWeek d = plusYears.getDayOfWeek();
+		
+		emps[1] = new InformalEmployee("유비정","서울","기획부",plusYears,d,1000000);
 		emps[2] = new TempEmployee("손임시","서울","영업부",25000,10);
 		long total = 0;
 		for(Employee e : emps) {
