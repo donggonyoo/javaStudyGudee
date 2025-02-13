@@ -21,19 +21,22 @@ public class Test5 {
 			System.out.print(arr[i] + ",");
 		}
 		
-		LambdaInterface2 f;
+		
 		
 		System.out.println();
 		System.out.print("홀수의 합:");
+		LambdaInterface2 f;
+		f = a -> a%2!=0;   //2로나눈나머지가 2가 아니면 true;
+		numSum(f, arr);                //밑이랑 같은 뜻임
 		
-//		f = a -> {return a%2 != 0; }; //2로나눈나머지가 2가 아니면 true;
-//		numSum(f, arr); 밑이랑 같은 뜻임
-		numSum(a -> a % 2 != 0, arr);//method(int a)를 말하는거임 method(int a)의 동작을 만든것!!
+//		numSum(a -> a % 2 != 0, arr);//method(int a)를 말하는거임 method(int a)의 동작을 만든것!!
 		
 		
 		System.out.print("짝수의 합:");
-		numSum(a -> a % 2 == 0, arr);
-		
+		numSum((a) -> a % 2 == 0, arr);
+		//  f = (a) -> {return  a % 2 == 0;};
+
+//---------------------------------------------------------------------
 		
 	}
 	private static void numSum(LambdaInterface2 f,int[] arr) {
