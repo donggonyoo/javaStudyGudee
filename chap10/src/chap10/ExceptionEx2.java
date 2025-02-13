@@ -9,6 +9,7 @@ package chap10;
  * -----> try블럭에서 발생되는 예외가 여러종류인 경우 예외별 예외처리가 가능
  * -> 상위 예외클래스(Exceptio)은 catch들 중 하단에 배치해야 함
  * 
+ * 
  * 예외 클래스 계층
  * Throwable - Error
  *    		 - Exception(예외클래스 의 최상단) - RunTimeException(예외처리 생략가능)
