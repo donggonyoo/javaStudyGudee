@@ -5,20 +5,38 @@ package test;
 [학번=100, 이름=홍길동,전공=경영]과 [학번=100, 이름=홍길동,전공=컴공]는 다른 객체입니다.
 [학번=100, 이름=홍길동,전공=경영]과 [학번=100, 이름=홍길동,전공=컴공]학생은 같은 학생입니다. 
  */
-class Student2 {
+class Student {
 	int studno;
 	String name;
 	String major;
-	public Student2(int studno, String name, String major) {
+	public Student(int studno, String name, String major) {
 		this.studno = studno;
 		this.name = name;
 		this.major = major;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Student) {
+			Student a = (Student)obj;
+			boolean equals = a.name.equals(name);
+			
+			return equals && a.studno==studno;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	public String toString() {
+		return "[ 학번 : "+studno+", 이름 :"+name+
+				", 전공 : "+major+" ]";
+	}
+	
 }
-public class Test2 {
+public class Test2_A {
 	public static void main(String[] args) {
-		Student2 s1 = new Student2(100,"홍길동","경영");
-		Student2 s2 = new Student2(100,"홍길동","컴공");
+		Student s1 = new Student(100,"홍길동","경영");
+		Student s2 = new Student(100,"홍길동","컴공");
 		if(s1 == s2) {
 			System.out.println(s1+"과 "+s2+"는 같은 객체입니다.");
 		} else {

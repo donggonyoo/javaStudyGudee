@@ -6,11 +6,12 @@ package test;
  * basketball
  */
 
-public class Test3 {
+public class Test3_A {
 	public static void main(String[] args) {
 		String str = "base"; 
 		System.out.println(str.replace('e','k')+"et");
-		str += "ball"; 
-		System.out.println(str);
+		String replace = str.replace('e','k');
+		replace += "et ball"; 
+		System.out.println(replace);
 	}
 }
