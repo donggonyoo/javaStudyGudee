@@ -18,24 +18,49 @@ public class Test5 {
 
 		int count = 0;
 		int index=0;
-		int [] x = new int[15];
+		String str="";
+
+		System.out.print(string2+" : ");
 		while(true) {
-			if(string.indexOf(string2)<0) {
+
+			//ex) "12345812".indexOf("12",0);---> 0  
+			///index++
+			/// "12345812".indexOf("12",1);--->  6
+			///index++
+			/// "12345812".indexOf("12",7);--->  -1 break;
+
+			int indexOf = string.indexOf(string2,index);
+			if(indexOf<0) {
+				
+				String[] split = str.split(",");
+				for (int i = 0; i < split.length; i++) {
+					if(split[i] != split[split.length-1]) {
+						System.out.print(split[i]+",");
+					}
+					else {
+						System.out.printf(split[i]);
+					}
+				}//split배열은 , 를 기준으로 나눠놨다 배열의마지막만 , 를 찍지않고 출력한다
+
+				if(count==0) {
+					System.out.print("없음");
+				}
+				System.out.println();
 				break;
 			}
-			else {
-				x[count]= string.indexOf(string2,index);
-				++count;
-				index++;
+			else{
+				str+=indexOf+","; //indexof, 문자를 String배열에저장 (마지막,를 안찍으려면 이방법을 써야할것같음)
+				index =indexOf+1;//이렇게 해줘야 찾은문자 다음문자부터 구하게됨
+				count++;//아예 존재하지않는 문자를 따로처리하기위해 count변수를 이용
 			}
-			
-		}
-		System.out.println(string2+" : ");
-		for (int i : x) {
-			System.out.print(i);
-		}
-		
 
+		}
 
 	}
+
+
+
+
+
 }
+

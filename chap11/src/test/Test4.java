@@ -27,14 +27,18 @@ import java.util.Scanner;
 2679정답입니다.
 3번 만에 맞추셨습니다. 게임을 종료합니다.
  */
-class NumberInputException extends Exception{
-	public NumberInputException(String msg) {
+class NumberInputException23 extends Exception{
+	
+
+	public NumberInputException23(String msg) {
 		super(msg);
 	}
 
 }
 
 class InputMismetchException extends Exception{
+	
+
 	public InputMismetchException(String msg) {
 		super(msg);
 	}
@@ -70,34 +74,31 @@ public class Test4 {
 				String next = scan.next();
 				Integer.parseInt(next);
 				if(next.length()>4 ||next.length()<4 ) {
-					throw new NumberInputException("4자리만");
+					throw new NumberInputException23("4자리만");
 				}
 				int Ncount=0;
-				for (int i = 0; i < next.length(); i++) {
-					if(next.charAt(0) == next.charAt(i)) {
-						Ncount++;
+				for (int i = next.length()-1; i >=1; i--) {//  30 31 32  20 21   10     [ 33 22 11 12  00 01 02 03 은 중복 ] 
+					for (int j = 0; j < i; j++) {
+						if(next.charAt(j) == next.charAt(i)) { 
+							++Ncount;
+						}
 					}
-				}
-				if(Ncount>1) {
-					throw new InputMismetchException("숫자중복");
-				}
+				}//모든 문자열을 
+				if(Ncount >= 1) {
+					throw new InputMismetchException("숫자중복!!!");
+					}
+				
+				
 
 				//----------------------------------------------------------------------------------				
-				int bCount=0;
-				int sCount=0;
+				
 
-
-				for (int i = 0; i < next.length(); i++) {
-					char c1 = next.charAt(i);
-					int indexOf2 = rand.indexOf(c1);
-
-					if(i==indexOf2) {
-						sCount++;
-					}
-					else if(!(indexOf2<0)) {
-						bCount++;
-					}
-				}
+				int[] sbCount = ball(next, rand);
+				
+				
+				int sCount= sbCount[0];//스트라이크
+				int bCount= sbCount[1];//볼
+				
 
 				if(sCount==4) {
 					count++;
@@ -114,7 +115,7 @@ public class Test4 {
 
 
 
-			} catch (NumberInputException e) {
+			} catch (NumberInputException23 e) {
 				System.out.println(e.getMessage());
 				++count;
 				System.out.println(count+"번쨰 시도중");
@@ -132,6 +133,32 @@ public class Test4 {
 			}
 
 		}
+	}
+	//스트라이크 볼 판단메서드
+	private static int[] ball(String next ,String rand) {
+		
+		int[] sbArr = new int[2];
+
+		for (int i = 0; i < next.length(); i++) {
+			char ch = next.charAt(i);//ch : i번째 문자
+			int indexOf2 = rand.indexOf(ch);//랜덤 숫자의 ch의 인덱스
+
+			//rand =  7319 ,,  next =  7421  라고 가정
+			//0번쨰루프 next.charAt(0)==7   rand.indexOf('7') == 0       [0==0] sCount++
+			// 1번쨰 루프 next.charAt(1)==4   rand.indexOf('4') == -1(존재하지않는 문자)
+			// 2번쨰루프  next.charAt(2)==2   rand.indexOf('2') == -1(존재하지않는 문자)
+		   // 3번째 루프  next.charAt(3)==1   rand.indexOf('1') == 2    [3!=2] bCount++; 
+			//					1스트라이크1볼
+			
+			if(i==indexOf2) { 
+				sbArr[0]++;  //strike 1개 증가
+			}
+			else if(!(indexOf2<0)) {
+				sbArr[1]++;  //ball 1개 증가
+			}
+		}
+		return sbArr;
+		
 	}
 
 
