@@ -24,9 +24,9 @@ public class Test5 {
 		while(true) {
 
 			//ex) "12345812".indexOf("12",0);---> 0  
-			///index++
+			///index = 0+1
 			/// "12345812".indexOf("12",1);--->  6
-			///index++
+			///index= 6+1
 			/// "12345812".indexOf("12",7);--->  -1 break;
 
 			int indexOf = string.indexOf(string2,index);

@@ -28,7 +28,7 @@ import java.util.Scanner;
 3번 만에 맞추셨습니다. 게임을 종료합니다.
  */
 class NumberInputException23 extends Exception{
-	
+
 
 	public NumberInputException23(String msg) {
 		super(msg);
@@ -37,7 +37,7 @@ class NumberInputException23 extends Exception{
 }
 
 class InputMismetchException extends Exception{
-	
+
 
 	public InputMismetchException(String msg) {
 		super(msg);
@@ -49,7 +49,7 @@ class InputMismetchException extends Exception{
 public class Test4 {
 
 	public static void main(String[] args) {
-		
+
 		int count=0;//시도 횟수 변수
 		Scanner scan = new Scanner(System.in);
 		String[] ran = {"0","1","2","3","4","5","6","7","8","9"}; //0부터9까지의 String배열
@@ -61,10 +61,12 @@ public class Test4 {
 			ran[b] = c;	//배열의 위치 섞는 알고리즘
 		}
 		String rand="";
-		for (int i = 0; i < 4 ; i++) { //앞에서부터 4개를 꺼내서 하나의 문자열로만듬 
+		for (int i = 0; i < 4 ; i++) { 
+			//앞에서부터 4개를 꺼내서 하나의 문자열로만듬 
 			rand+=ran[i];
 		}
-		System.out.println(rand);//재미를 위해서는 이걸 주석처리해야하는데 프로그램동작확인을위해 출력해놈
+		System.out.println(rand);
+		//재미를 위해서는 이걸 주석처리해야하는데 프로그램동작확인을위해 출력해놈
 
 
 		while(true) {
@@ -72,39 +74,41 @@ public class Test4 {
 
 				System.out.println("숫자를 입력하세요 : ");
 				String next = scan.next();
-				
+
 				Integer.parseInt(next);
 				//int형으로 바꿀수없는 문자가오면 NumberFormatException 발생(catch로잡자)
-				
+
 				if(next.length()>4 ||next.length()<4 ) {
 					throw new NumberInputException23("4자리만");
 				}
 				int Ncount=0;
 				for (int i = next.length()-1; i >=1; i--) {
-					//  3<->0, 3<->1, 3<->2 , 2<->0 ,2<->1  , 1<->0     [ 33 22 11 12  00 01 02 03 은 중복 ] 
+					//  3<->0, 3<->1, 3<->2 , 2<->0 ,2<->1  , 1<->0    
+					//[ 33 22 11 12  00 01 02 03 은 중복 ] 
 					for (int j = 0; j < i; j++) {
 						if(next.charAt(j) == next.charAt(i)) { 
 							++Ncount;
 						}
 					}
 				}//모든문자열을 뒤져서중복을 찾아내는 알고리즘
-				
-				if(Ncount >= 1) { //Ncount가 하나라도 올라갔다면 중복이있단뜻이므로 예외발생
+
+				if(Ncount >= 1) { 
+					//Ncount가 하나라도 올라갔다면 중복이있단뜻이므로 예외발생
 					throw new InputMismetchException("숫자중복!!!");
-					}
-				
-				
+				}
+
+
 
 				//----------------------------------------------------------------------------------				
-				
+
 
 				//내가입력한 변수와 시스템이만든 문자 넣기
 				int[] sbCount = ball(next, rand);//int[] 타입반환하는 메서드
-				
-				
+
+
 				int sCount= sbCount[0];//스트라이크
 				int bCount= sbCount[1];//볼
-				
+
 
 				if(sCount==4) {
 					count++;
@@ -142,7 +146,7 @@ public class Test4 {
 	}
 	//스트라이크 볼 판단메서드
 	private static int[] ball(String next ,String rand) {
-		
+
 		int[] sbArr = new int[2];
 
 		for (int i = 0; i < next.length(); i++) {
@@ -153,9 +157,9 @@ public class Test4 {
 			// 0 번쨰루프 next.charAt(0)==7   rand.indexOf('7') == 0       [0==0] sCount++
 			// 1 번쨰 루프 next.charAt(1)==4   rand.indexOf('4') == -1(존재하지않는 문자)
 			// 2 번쨰루프  next.charAt(2)==2   rand.indexOf('2') == -1(존재하지않는 문자)
-		   //  3 번째 루프  next.charAt(3)==1   rand.indexOf('1') == 2    [3!=2] bCount++; 
+			//  3 번째 루프  next.charAt(3)==1   rand.indexOf('1') == 2    [3!=2] bCount++; 
 			//					1스트라이크 1볼
-			
+
 			if(i==indexOf2) { 
 				sbArr[0]++;  //strike 1개 증가
 			}
@@ -164,7 +168,7 @@ public class Test4 {
 			}
 		}
 		return sbArr;
-		
+
 	}
 
 

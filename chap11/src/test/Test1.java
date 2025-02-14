@@ -45,7 +45,9 @@ class NumberInputException extends Exception{
 	NumberInputException(String msg){
 		super(msg);
 	}
-}
+}//1보다크고100보다 작은수가 입력되지 않았을 때 발생시킬 예외
+
+//---------------------------------------------------------------------------------------------------
 public class Test1 {
 	public static void main(String[] args) {
 		int randomNum = (int)(Math.random()*100)+1;
@@ -57,7 +59,7 @@ public class Test1 {
 				System.out.println("1부터100까지의 숫자를 입력하세요");
 				int num = scan.nextInt();
 				if(!(1<num && num<100)) {
-					throw new NumberInputException("1부터100만 입력");
+					throw new NumberInputException("1부터100만 입력");//예외발생
 				}
 				if(num==randomNum) {
 					System.out.println("정답입니다  입력횟수 : "+count);
@@ -69,17 +71,17 @@ public class Test1 {
 					else {
 						System.out.println("작은수를 입력하세요");
 					}
-					count++;
+					count++;//오답 시 계속 count를 누적
 				}
 				
 				
-			} catch (NumberInputException e) {
-				System.out.println("오류메시지 :"+e.getMessage());
-				count++;
+			} catch (NumberInputException e) {//예외처리
+				System.out.println("오류메시지 :"+e.getMessage());//오류메시지출력
+				count++;//count누적
 			}
 			catch (InputMismatchException e) {
 				System.out.println("숫자만 입력하세요");
-				scan.next();
+				scan.next();//이걸해야 문자를 처리해서 무한루프가되지않는다
 				count++;
 			}
 			
