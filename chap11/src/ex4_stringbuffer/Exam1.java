@@ -16,6 +16,7 @@ public class Exam1 {
 //				sb.append(string.charAt(i));
 //			}
 			if(!string2.contains(string.charAt(i)+"")){
+				// ""을 추가해줌으로써 string형으로만들어주는거임
 				s+=string.charAt(i);
 			}
 		}

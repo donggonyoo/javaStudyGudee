@@ -58,6 +58,7 @@ public class StringEx5 {
 		System.out.printf("%10s\n","홍길동");
 		//%-10s : 10자리확보해 문자열출력(좌측정렬)
 		System.out.printf("%-10s\n","홍길동");
+		System.out.printf("%.2s\n","홍길동");//2개문자만
 		
 		
 		//%c : 문자출력
