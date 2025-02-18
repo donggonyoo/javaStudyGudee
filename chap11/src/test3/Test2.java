@@ -17,36 +17,8 @@ import java.util.Scanner;
  */
 public class Test2 {
 	public static void main(String[] args) {
-		Period p1 = Period.of(2025, 01, 01);
-		Period p2 = Period.of(2025, 01, 03);
 		
-		Period minus = p1.minus(p2);
-		System.out.println(Math.abs(minus.getDays())+"일 차이");
-		
-		Date date = new Date();
-		Calendar c = Calendar.getInstance();
-		Scanner scan = new Scanner(System.in);
-		long [] sum = new long[2];
-		
-		for (int i = 0; i < 2; i++) {
-			System.out.println("날짜를 입력 :  ");
-			int y = scan.nextInt();
-			int m = scan.nextInt();
-			int d = scan.nextInt();
-			c.set(y, (m-1),d); 
-			
-			date.setTime(c.getTimeInMillis());
-			sum[i]= date.getTime();
-		}
-		
-		long a = sum[1] - sum[0];
-		System.out.println(a/(1000*60*60*24)+"일");
-		
-		
-		
-		
-		
-		
+	
 		
 
 	}

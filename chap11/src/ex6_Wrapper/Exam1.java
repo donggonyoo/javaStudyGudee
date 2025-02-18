@@ -8,9 +8,22 @@ public class Exam1 {
 		
 		String[] split = str.split(",");
 		int sum=0;
-		for (String s : split) {
-			System.out.print(Integer.parseInt(s.trim())+"+");
-			sum += Integer.parseInt(s.trim());//공백제거
+		System.out.print("공백 제거 전 : ");
+		for (String s1 : split) {
+			System.out.printf("["+s1+"]");
+		}System.out.println();
+		
+		
+		for (int i = 0; i < split.length; i++) {
+			int num = Integer.parseInt(split[i].trim());
+			sum+=num;
+			if(i != split.length-1) {
+				System.out.print(num+"+");
+			}
+			else {
+				System.out.print(num);
+			}
+			
 		}
 		System.out.println(" == "+sum);
 	}

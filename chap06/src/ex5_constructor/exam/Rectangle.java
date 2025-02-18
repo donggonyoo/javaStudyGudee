@@ -15,9 +15,10 @@ public class Rectangle {
 		this.height = 1;
 	}
 
-	private int length() {
+	 int length() {
 		return 2*(width+height);
 	}
+	
 	 int area() {
 		return width*height;}
 	 

@@ -15,25 +15,6 @@ import java.util.regex.Pattern;
 
 public class Test3 {
 	public static void main(String[] args) {
-		String[] phoneNumArr = {
-				"012-3456-7890","099-2456-7980", 
-				"088-2346-9870","013-3456-7890" };
-		
-		Scanner scan = new Scanner(System.in);
-		System.out.println("찾고자하는 번호 ");
-		String num = scan.next();
-		String p = "0\\d{2}-\\d{4}-\\d{4}";
-		Pattern compile = Pattern.compile(p);
-		for (String s : phoneNumArr) {
-			Matcher m = compile.matcher(s);
-			m.find();			
-			if(m.group().contains(num)) {
-				System.out.println(m.group());
-			}
-		}
-		
-		
-		
-		
+
 	}
 }

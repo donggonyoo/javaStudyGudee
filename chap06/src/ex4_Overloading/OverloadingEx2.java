@@ -12,6 +12,15 @@ class Adder2{
 		System.out.print("1 : ");
 		return a+b;
 	}
+//	int add(int x, int y) {
+//		System.out.print("1 : ");
+//		return x+y;
+//	} 매개변수이름만 바꾸면 성립X
+	
+//	double add(int a , int b) {
+//		return a+b;
+//	}타입은 상관이없음 매개변수가 바뀌어야함
+	
 	long add(long a, int b) {
 		System.out.print("2 : ");
 		return a+b;
@@ -19,7 +28,7 @@ class Adder2{
 	long add(int a, long b) {
 		System.out.print("3 : ");
 		return a+b;
-	}
+	}//매개변수의 위치를 바꾸면 성립 O
 	
 	long add(long a, long b) {
 		System.out.print("4 : ");

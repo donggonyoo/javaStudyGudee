@@ -28,6 +28,8 @@ class Coin{
 	}
 	
 }
+
+
 public class Test3 {
 	public static void main(String[] args) {
 		Coin coin = new Coin();

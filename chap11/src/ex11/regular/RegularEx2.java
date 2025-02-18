@@ -46,6 +46,7 @@ public static void main(String[] args) {
 		for (String p : patterns) {
 			Pattern pattern = Pattern.compile(p);
 			Matcher m = pattern.matcher(s);
+	
 			if(m.matches()) {
 				System.out.println(p+",");
 			}
