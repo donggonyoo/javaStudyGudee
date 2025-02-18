@@ -13,7 +13,8 @@ import java.util.regex.Pattern;
 public class Test4_A {
 	public static void main(String[] args) {
 		String text = 
-				"Hello, my email is example_1@gmail.com and my work email is contact@company.co.kr.";
+				"Hello, my email is example_1@gmail.com and my work email is contact@company.co.kr."
+				+ " donggon_25g@naver.co.kr64";
 		
 
 		String pat = "[\\w_]+@[\\w.]+\\.[\\w]+";
